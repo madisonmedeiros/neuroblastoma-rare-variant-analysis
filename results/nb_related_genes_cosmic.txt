@@ -1,0 +1,2 @@
+Gene	test_allele_count	test_gnomAD_allele_count_iCFgCFadjust	test_P_rvexcaliber_base_iCFgCFadjust
+ALK	4	3.85097147286143	0.469563140544014
