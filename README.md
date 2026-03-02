@@ -60,9 +60,6 @@ Candidate Gene List
 ```
 neuroblastoma-rare-variant-analysis/
 ├── scripts/
-│   ├── 0_get_ANNOVAR_annotations.clean.sh        # Download ANNOVAR databases (refGene, gnomAD 2.1.1, dbNSFP)
-│   ├── 1A_get_RVBurdenMatrix_internal.clean.sh   # Generate rare variant burden matrix (9 input vars)
-│   ├── 3_get_SummaryAssociations_iCF_gCF.clean.sh# iCF & gCF-adjusted association statistics (8 input vars)
 │   ├── count_alleles.py                          # Independent allele count verification script
 │   ├── double_check.py                           # Burden matrix validation against VCF data
 │   ├── cosmic_check.py                           # Filter significant genes against COSMIC Cancer Gene Census
