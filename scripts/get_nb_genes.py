@@ -1,3 +1,36 @@
+"""
+get_nb_genes.py
+
+Filters the COSMIC Cancer Gene Census overlap results down to genes where
+COSMIC specifically lists "neuroblastoma" in the somatic tumour types column.
+This is the final filtering stage in the candidate gene discovery pipeline,
+narrowing from cancer-associated genes to neuroblastoma-specific hits.
+
+Pipeline context:
+    significant_genes.txt (75 genes, P < 0.05)
+        → cosmic_check.py
+    significant_cancer_genes.txt (97 genes, COSMIC CGC overlap)
+        → get_nb_genes.py  ← this script
+    nb_related_genes_cosmic.txt (neuroblastoma-specific hits)
+    nb_genes.txt (gene names only, for downstream lookup)
+
+Inputs:
+    - significant_cancer_genes.txt : Output of cosmic_check.py
+    - cancer_gene_census.csv       : COSMIC CGC downloaded from
+                                     https://cancer.sanger.ac.uk/cosmic
+
+Outputs:
+    - nb_related_genes_cosmic.txt  : Significant genes where COSMIC lists
+                                     neuroblastoma as a somatic tumour type
+    - nb_genes.txt                 : Gene names only (one per line),
+                                     for use in downstream validation
+
+Usage:
+    python3 get_nb_genes.py
+
+Author: Madison Medeiros
+"""
+
 import pandas as pd
 
 # Load your filtered list of cancer-related significant genes
