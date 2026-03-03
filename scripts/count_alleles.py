@@ -1,3 +1,28 @@
+"""
+count_alleles.py
+
+Independently calculates observed allele counts per gene directly from the
+RV-Excalibur burden matrix as a QC validation step. Sums rare variant allele
+counts across all patients for each gene.
+
+Note: Minor discrepancies between this output and RV-Excalibur summary results
+are expected — RV-Excalibur applies additional coverage and M-CAP filters that
+this script does not replicate. This script is for QC purposes only.
+
+Input:
+    - final_output_RVBurdenMatrix_0.9_0_nfe_rcc.txt : RV-Excalibur burden matrix
+      (rows = genes, columns = patient IDs, values = rare variant allele counts)
+
+Output:
+    - burden_matrix_allele_counts.txt : Per-gene allele count totals across all patients
+
+Usage:
+    python3 count_alleles.py
+    (Designed to be submitted via sbatch on UMass Lowell UNITY HPC)
+
+Author: Madison Medeiros
+"""
+
 import pandas as pd
 
 print("Loading Burden Matrix...", flush=True)
