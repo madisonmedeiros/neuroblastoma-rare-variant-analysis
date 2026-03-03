@@ -338,22 +338,6 @@ After identifying candidate genes, the following databases were used for follow-
 
 ---
 
-## File Path Reference (UML UNITY HPC)
-
-```
-/project/pi_rachel_melamed_uml_edu/neuroblastoma/maddie/
-├── annovar/                    # ANNOVAR installation
-├── double_checking/            # Allele count verification scripts
-│   ├── output_hg19.vcf
-│   ├── hg19_refGene.txt
-│   └── final_output_RVBurdenMatrix_0.9_0_nfe_rcc.txt
-└── final_steps/
-    └── analysis_files/
-        └── plink_files/        # .bed / .bim / .fam files
-```
-
----
-
 ## Author
 
 **Madison Medeiros**  
