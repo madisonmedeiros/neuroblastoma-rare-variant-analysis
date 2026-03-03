@@ -32,6 +32,8 @@ import pandas as pd
 print("Loading in files", flush=True)
 
 # File Paths
+# NOTE: File paths below are specific to the UMass Lowell UNITY HPC cluster.
+# Update these paths to match your local environment before running.
 base_path = "/project/pi_rachel_melamed_uml_edu/neuroblastoma/maddie/double_checking/"
 vcf_file = base_path + "output_hg19.vcf"
 burden_matrix_file = base_path + "final_output_RVBurdenMatrix_0.9_0_nfe_rcc.txt"  
