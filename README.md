@@ -342,7 +342,7 @@ After identifying candidate genes, the following databases were used for follow-
 
 **Madison Medeiros**  
 M.S. Bioinformatics, University of Massachusetts Lowell  
-[medeirosmm@merrimack.edu](mailto:medeirosmm@merrimack.edu)
+[madisonmedeiros99@gmail.com](mailto:madisonmedeiros99@gmail.com)
 
 ---
 
