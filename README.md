@@ -180,7 +180,7 @@ cp neuroblastoma_plink.bed \
 
 ---
 
-### Step 3: Generate Rare Variant Burden Matrix
+### Step 5: Generate Rare Variant Burden Matrix
 
 ```bash
 bash scripts/1A_get_RVBurdenMatrix_internal.clean.sh \
@@ -202,7 +202,7 @@ Output: `final_output_RVBurdenMatrix_[MAF]_[MCAP]_[pop]_[suffix].txt`
 
 ---
 
-### Step 4: Run Association Analysis
+### Step 6: Run Association Analysis
 
 ```bash
 bash scripts/3_get_SummaryAssociations_iCF_gCF.clean.sh \
@@ -230,7 +230,7 @@ $$\widehat{iCF}_i = \frac{\sum_{g=1}^{M} \text{OAC}_{i,g}}{\sum_{g=1}^{M} \text{
 
 ---
 
-### Step 5: Verify Allele Counts (Optional QC)
+### Step 7: Verify Allele Counts (Optional QC)
 
 ```bash
 python3 scripts/count_alleles.py
@@ -242,7 +242,7 @@ This script independently calculates allele counts per gene directly from the VC
 
 ---
 
-### Step 6: Filter Results & Identify Candidate Genes
+### Step 8: Filter Results & Identify Candidate Genes
 
 Results were filtered in three stages:
 
