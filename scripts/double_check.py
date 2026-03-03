@@ -1,3 +1,32 @@
+"""
+double_check.py
+
+Validates the RV-Excalibur burden matrix by cross-referencing it against the
+original VCF file. For each patient-gene pair marked as '1' in the burden matrix,
+this script checks whether a variant actually exists in that gene's coordinates
+in the VCF — confirming the burden matrix is consistent with the raw data.
+
+Note: Minor discrepancies are expected. RV-Excalibur applies additional quality
+filters (coverage thresholds, M-CAP filtering) that may cause some VCF variants
+to be excluded from the burden matrix. This script is for QC purposes only.
+
+Inputs:
+    - output_hg19.vcf                              : Lifted-over VCF (hg19)
+    - final_output_RVBurdenMatrix_0.9_0_nfe_rcc.txt : RV-Excalibur burden matrix
+    - hg19_refGene.txt                             : ANNOVAR refGene annotation file
+      (used to map gene names to genomic coordinates)
+
+Output:
+    - Prints match/mismatch summary to stdout
+    - Designed to be reviewed interactively or captured via SLURM log
+
+Usage:
+    python3 double_check.py
+    (Designed to be submitted via sbatch on UMass Lowell UNITY HPC)
+
+Author: Madison Medeiros
+"""
+
 import pandas as pd
 
 print("Loading in files", flush=True)
@@ -135,15 +164,15 @@ print("Variant check completed.", flush=True)
 
 # Step 6: Print Matches & Errors
 if matches:
-    print(f"✅ Found {len(matches)} correct matches! Showing first 10:")
+    print(f"Found {len(matches)} correct matches! Showing first 10:")
     for match in matches[:10]:
         print(match)
 
 if errors:
-    print(f"❌ Found {len(errors)} mismatches! Showing first 10:")
+    print(f"Found {len(errors)} mismatches! Showing first 10:")
     for error in errors[:10]:
         print(error)
 else:
-    print("🎉 No mismatches found! Burden Matrix is consistent with VCF.")
+    print("No mismatches found! Burden Matrix is consistent with VCF.")
 
 print("Updated variant checking job completed.", flush=True)
