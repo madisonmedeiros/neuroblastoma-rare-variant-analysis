@@ -9,6 +9,9 @@ Note: Minor discrepancies between this output and RV-Excalibur summary results
 are expected — RV-Excalibur applies additional coverage and M-CAP filters that
 this script does not replicate. This script is for QC purposes only.
 
+File paths below are specific to the UMass Lowell UNITY HPC cluster.
+Update these paths to match your local environment before running.
+
 Input:
     - final_output_RVBurdenMatrix_0.9_0_nfe_rcc.txt : RV-Excalibur burden matrix
       (rows = genes, columns = patient IDs, values = rare variant allele counts)
