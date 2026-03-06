@@ -135,7 +135,7 @@ print("Checking for mismatches between Burden Matrix and VCF...", flush=True)
 
 for patient in burden_matrix.columns:
     if patient not in patient_variants:  # If patient is missing in VCF, flag it
-        print(f"⚠ Warning: Patient {patient} is in Burden Matrix but missing from VCF!")
+        print(f"Warning: Patient {patient} is in Burden Matrix but missing from VCF!")
         continue
 
     for gene in burden_matrix.index:
